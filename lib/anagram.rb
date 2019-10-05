@@ -11,7 +11,13 @@ class Anagram
   end
   
   def match(phrase)
-    phrase.map { |piece| piece if piece.split(//).sort == @word.split(//).sort }
+    grams = []
+    phrase.each { |piece|
+      if piece.split(//).sort == @word.split(//).sort
+        grams << piece
+      end
+    }
+    grams
   end
   
 end
