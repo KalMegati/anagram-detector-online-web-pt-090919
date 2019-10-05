@@ -11,13 +11,13 @@ class Anagram
   end
   
   def matching
-    piece.split(//).sort == word.split(//).sort
+    yield.split(//).sort == word.split(//).sort
   end
   
   def match(phrase)
     grams = []
     phrase.each { |piece|
-      if yield matching
+      if matching {piece}
         grams << piece
       end
     }
