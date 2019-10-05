@@ -12,6 +12,7 @@ class Anagram
   
   def matching
     yield.split(//).sort == word.split(//).sort
+    
   end
   
   def match(phrase)
