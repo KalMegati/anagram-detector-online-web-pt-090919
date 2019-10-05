@@ -16,8 +16,7 @@ class Anagram
   end
   
   def match(phrase)
-    grams = []
-    phrase.map { |piece| piece if matching{piece} }
+    phrase.map{ |piece| piece if matching{piece} }.compact
   end
   
 end
