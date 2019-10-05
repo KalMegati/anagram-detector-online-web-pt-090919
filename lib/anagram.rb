@@ -10,10 +10,14 @@ class Anagram
     @word = word
   end
   
+  def matching
+    
+  end
+  
   def match(phrase)
     grams = []
     phrase.each { |piece|
-      if piece.split(//).sort == @word.split(//).sort
+      if piece.split(//).sort == word.split(//).sort
         grams << piece
       end
     }
