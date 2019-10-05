@@ -16,11 +16,7 @@ class Anagram
   
   def match(phrase)
     grams = []
-    phrase.each { |piece|
-      if matching {piece}
-        grams << piece
-      end
-    }
+    phrase.each { |piece| grams << piece if matching {piece}}
     grams
   end
   
